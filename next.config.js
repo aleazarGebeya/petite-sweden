@@ -1,21 +1,13 @@
-/** @type {import('next').NextConfig} */
 const path = require('path')
 
 const nextConfig = {
   // Separate build directory for production builds
   distDir: process.env.NODE_ENV === 'production' ? '.next-build' : '.next-dev',
-  
   // Generate standalone output for easier deployment
   output: 'standalone',
-  
   // Optimize builds
-  experimental: {
-    // Enable build cache
-    turbotrace: {
-      logLevel: 'error'
-    }
-  },
-  
+  // (Removed experimental.turbotrace - not a valid Next.js option)
+
   // Custom webpack config to handle file conflicts and path resolution
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     // Use different cache directories for dev vs build
@@ -26,11 +18,10 @@ const nextConfig = {
       }
     } else {
       config.cache = {
-        type: 'filesystem', 
+        type: 'filesystem',
         cacheDirectory: '/home/user/.next-cache-build'
       }
     }
-    
     // Enhanced path resolution for @/ imports
     config.resolve.alias = {
       ...config.resolve.alias,
@@ -42,13 +33,11 @@ const nextConfig = {
       '@/app': path.resolve(__dirname, 'app'),
       '@/src': path.resolve(__dirname, 'src')
     }
-    
     // Ensure proper module resolution
     config.resolve.modules = [
       path.resolve(__dirname, 'node_modules'),
       'node_modules'
     ]
-    
     // Handle missing modules gracefully
     config.resolve.fallback = {
       ...config.resolve.fallback,
@@ -56,19 +45,15 @@ const nextConfig = {
       path: false,
       os: false
     }
-    
     return config
   },
-  
   // Transpile packages that might cause issues
   transpilePackages: ['@radix-ui/react-accordion', 'lucide-react'],
-  
   // Additional TypeScript configuration
   typescript: {
     // Allow build to continue even with TypeScript errors during development
     ignoreBuildErrors: process.env.NODE_ENV === 'development'
   },
-  
   // ESLint configuration
   eslint: {
     // Allow build to continue even with ESLint errors during development
