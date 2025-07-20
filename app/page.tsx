@@ -1,3 +1,4 @@
+"use client"
 import React from "react"
 import { HeroSection } from "@/components/hero-section"
 import { MissionStatement } from "@/components/mission-statement"
@@ -10,7 +11,7 @@ import { DonationSection } from "@/components/donation-section"
 import { VolunteerRegistration } from "@/components/volunteer-registration"
 import { Footer } from "@/components/footer"
 
-export default function Page() {
+export function Page() {
   return (
     <main className="flex flex-col items-center bg-gradient-to-b from-green-50 via-white to-green-100 min-h-screen w-full">
       <HeroSection />

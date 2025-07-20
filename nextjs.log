@@ -161,3 +161,36 @@
 2025-07-20T09:00:14:  ⚠ See instructions if you need to configure Turbopack:
 2025-07-20T09:00:14:   https://nextjs.org/docs/app/api-reference/next-config-js/turbo
 2025-07-20T09:00:14: 
+2025-07-20T09:00:32:  ⚠ Found a change in next.config.js. Restarting the server to apply the changes...
+2025-07-20T09:00:33:    ▲ Next.js 15.3.3 (Turbopack)
+2025-07-20T09:00:33:    - Local:        http://localhost:3000
+2025-07-20T09:00:33:    - Network:      http://169.254.0.21:3000
+2025-07-20T09:00:33: 
+2025-07-20T09:00:33:  ✓ Starting...
+2025-07-20T09:00:34:  ✓ Ready in 1423ms
+2025-07-20T09:00:34:  ⚠ Webpack is configured while Turbopack is not, which may cause problems.
+2025-07-20T09:00:34:  ⚠ See instructions if you need to configure Turbopack:
+2025-07-20T09:00:34:   https://nextjs.org/docs/app/api-reference/next-config-js/turbo
+2025-07-20T09:00:34: 
+2025-07-20T09:00:41:  ○ Compiling / ...
+2025-07-20T09:00:49:  ✓ Compiled / in 8.5s
+2025-07-20T09:00:51:  GET / 200 in 9911ms
+2025-07-20T09:00:52:  ⚠ Cross origin request detected from 3000-i2t8nr917mk8ndrdvmrun-6532622b.e2b.app to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+2025-07-20T09:00:52: Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+2025-07-20T09:02:02:  ⚠ Found a change in next.config.js. Restarting the server to apply the changes...
+2025-07-20T09:02:03:    ▲ Next.js 15.3.3 (Turbopack)
+2025-07-20T09:02:03:    - Local:        http://localhost:3000
+2025-07-20T09:02:03:    - Network:      http://169.254.0.21:3000
+2025-07-20T09:02:03: 
+2025-07-20T09:02:03:  ✓ Starting...
+2025-07-20T09:02:05:  ✓ Ready in 2.1s
+2025-07-20T09:02:05:  ⚠ Webpack is configured while Turbopack is not, which may cause problems.
+2025-07-20T09:02:05:  ⚠ See instructions if you need to configure Turbopack:
+2025-07-20T09:02:05:   https://nextjs.org/docs/app/api-reference/next-config-js/turbo
+2025-07-20T09:02:05: 
+2025-07-20T09:02:11:  ○ Compiling / ...
+2025-07-20T09:03:28:  ✓ Compiled / in 77.4s
+2025-07-20T09:03:36:  ⨯ [Error: The default export is not a React Component in "/page"] {
+2025-07-20T09:03:36:   page: '/'
+2025-07-20T09:03:36: }
+2025-07-20T09:03:40:  ○ Compiling /_error ...
