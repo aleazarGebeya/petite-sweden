@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+  ignore = "git diff --quiet HEAD^ HEAD ./app ./components ./lib ./public ./styles .env.local || exit 1"
+
+[dev]
+  command = "npm run dev"
+  targetPort = 3000
+
+env = {"NEXT_PUBLIC_SUPABASE_URL"="${NEXT_PUBLIC_SUPABASE_URL}", "NEXT_PUBLIC_SUPABASE_ANON_KEY"="${NEXT_PUBLIC_SUPABASE_ANON_KEY}"}
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
